@@ -1,2 +1,2 @@
 robot update
-![Base board]( "images/base board.jpg")
+![Robot Sketch]( "images/robot full sketch.jpg")
