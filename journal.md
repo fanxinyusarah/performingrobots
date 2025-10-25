@@ -6,7 +6,7 @@ We started by sketching the full design of the robot on paper to visualize its p
 
 <img src="images/1_robot_full_sketch.jpg" width="400"/>
 
-After that, we began building the body using cardboard pieces. The main torso was formed from four boards, glued together to create a stable base. Each side of the body is made from an isosceles trapezoid, with the bottom edge measuring 30 mm and the top 40 mm. By gluing together four of these trapezoidal boards, we formed a tapered shape that looks a bit like a trash can, creating a cute, top-heavy silhouette.
+After that, we began building the body using cardboard pieces. The main torso was formed from four boards, glued together to create a stable base. Each side of the body is made from an isosceles trapezoid, with the bottom edge measuring 30 mm and the top 40 mm. By gluing together four of these trapezoidal boards, we formed a tapered shape that looks a bit like a trash can, creating a cute, top-heavy silhouette. To make the panels stronger, we also cut rectangular reinforcement boards with the grain running perpendicular to the original cardboard and glued them inside to prevent bending and twisting.
 
 <img src="images/2_body_4_board.jpg" width="400"/>
 
