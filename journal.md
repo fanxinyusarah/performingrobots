@@ -113,3 +113,11 @@ By this point, the outer body structure was mostly finished, but it looked a bit
 Next, we prepared to wire the motors to the Arduino Mega. Since the center of the body is hollow, we added a cardboard crossbeam inside as a shelf for the Mega. The beam spans left–right, attaching to the two side panels, while we kept the front and back open to route cables cleanly. This crossbeam not only provides a stable mounting platform for the board but also stiffens the torso, making the whole body more rigid.
 
 <img src="images/35_arduino_mega_shelf.jpg" width="400"/>
+
+
+* Compared to the list above, what did you accomplish for last Thursday (October 23)?
+  We have already completed everything we wrote, including connecting the body and base, the head and body, making two arms and controlling both arms using two motors. Since we don't have the circuit board on top of the arduino mega, we connect the servos to the arduino using jumper cables to test every motor work can work well. 
+* What will you accomplish for this Thursday October 30?
+  We plan to connect three servos to the Arduino Mega and make sure they can move properly. We also aim to complete the rotating antenna on the head, finish building the hammer for the hand, and design the structure for the eyes and other parts of the head.
+* What features remain to be implemented?
+  We still need to decorate the entire robot, build the outer shell for the head and other components, and reinforce the joints and connections between the arms and shoulders to ensure stable movement.
