@@ -6,7 +6,7 @@ We started by sketching the full design of the robot on paper to visualize its p
 
 <img src="images/1_robot_full_sketch.jpg" width="400"/>
 
-After that, we began building the body using cardboard pieces. The main torso was formed from four boards, glued together to create a stable base. Each side of the body is made from an isosceles trapezoid, with the bottom edge measuring 30 mm and the top 40 mm. By gluing together four of these trapezoidal boards, we formed a tapered shape that looks a bit like a trash can, creating a cute, top-heavy silhouette.
+After that, we began building the body using cardboard pieces. The main torso was formed from four boards, glued together to create a stable base. Each side of the body is made from an isosceles trapezoid, with the bottom edge measuring 30 mm and the top 40 mm. By gluing together four of these trapezoidal boards, we formed a tapered shape that looks a bit like a trash can, creating a cute, top-heavy silhouette. To make the panels stronger, we also cut rectangular reinforcement boards with the grain running perpendicular to the original cardboard and glued them inside to prevent bending and twisting.
 
 <img src="images/2_body_4_board.jpg" width="400"/>
 
@@ -34,7 +34,7 @@ Next, we began designing the motor holder. we first made a rough sketch to figur
 
 <img src="images/8_motor_holder_sketch.jpg" width="400"/>
 
-Then we started cutting the wooden holder using the scroll saw. The outer edges were easy to cut, and we shaped the piece into a U-like form. However, the two inner 90-degree corners were difficult to reach cleanly. To solve this, we tried a different approach: we made many thin parallel cuts in the section that needed to be removed, as shown in the picture, slicing it into narrow strips. Then we used other tools to chip away or sand off those small strips to hollow out the middle. This method worked, but the inner surface came out quite rough, and the process sometimes caused the wood layers to separate.
+Then we started cutting the wooden holder using the band saw machine. The outer edges were easy to cut, and we shaped the piece into a U-like form. However, the two inner 90-degree corners were difficult to reach cleanly. To solve this, we tried a different approach: we made many thin parallel cuts in the section that needed to be removed, as shown in the picture, slicing it into narrow strips. Then we used other tools to chip away or sand off those small strips to hollow out the middle. This method worked, but the inner surface came out quite rough, and the process sometimes caused the wood layers to separate.
 
 <img src="images/9_holder_cut_try.jpg" width="400"/>
 
@@ -74,9 +74,13 @@ Next, we connected the arm to the motor’s horn. We cut a small rectangular car
 
 <img src="images/21_cardboard_arm_to_motor.jpg" width="400"/>
 
-For the metal arm on the other side, we found wire mesh in the scene shop. It was very stiff, so we used bolt cutters to cut a 90-degree V-notch in the middle of the cylindrical mesh. This notch let us fold the mesh to a clean 90-degree bend. We then overlapped the two sides along the fold and secured the seam with zip ties, which locked the mesh into a stable tubular shape while keeping it lightweight and slightly flexible.
+For the metal arm on the other side, we found wire mesh in the scene shop. 
 
-<img src="images/22_wire_mesh.jpg" width="400"/> <img src="images/23_wire_mesh_45_cut.jpg" width="400"/> <img src="images/24_wire_mesh_fold.jpg" width="400"/>
+<img src="images/22_wire_mesh.jpg" width="400"/> 
+
+It was very stiff, so we used bolt cutters to cut a 90-degree V-notch in the middle of the cylindrical mesh. This notch let us fold the mesh to a clean 90-degree bend. We then overlapped the two sides along the fold and secured the seam with zip ties, which locked the mesh into a stable tubular shape while keeping it lightweight and slightly flexible.
+
+<img src="images/23_wire_mesh_45_cut.jpg" width="400"/> <img src="images/24_wire_mesh_fold.jpg" width="400"/>
 
 To fit the storyline, we designed the robot so that its metal arm holds a small hammer. At the end of the wire-mesh arm, we created a U-shaped hand using cardboard pieces cut to shape and attached them to the wire frame with hot glue. This design made the robot’s gesture clearer and connected it better to the narrative of the performance.
 
@@ -85,3 +89,35 @@ To fit the storyline, we designed the robot so that its metal arm holds a small 
 Next, we connected the wire-mesh arm to the motor horn. We threaded four zip ties through different openings of the mesh and cinched them around the horn to hold it in place. Then we applied a thick layer of hot glue over the contact area between the mesh and the horn, increasing the bonding surface and making the connection much more secure. Then, the whole arm was finished. 
 
 <img src="images/26_wire_arm_to_motor.jpg" width="400"/> <img src="images/27_full_wire_arm.jpg" width="400"/>
+
+After finishing both arms, we started preparing to install the Arduino Mega. Since we didn’t yet have the circuit board and a proper holder for the Mega, we temporarily connected the motor wires directly to the board just to test whether the arms could move properly with the motors. During testing, we discovered that the motor on the wire-mesh arm wasn’t functioning correctly, so we had to fully disassemble the setup, remove the motor, and replace it with a new one before reattaching everything. This process took quite a lot of time, and we learned that it’s better to complete all motor testing before assembling to avoid the need for rework later.
+
+<img src="images/28_test_motor.jpg" width="400"/>
+
+Then, we assembled the neck. To let the head rotate, we used a turntable swivel bearing (a “lazy Susan” bearing). We planned for the top plate of the bearing to be driven by the motor, so we first cut a motor-sized rectangular opening in the top cover board of the body and pressed the motor in for a snug, press fit. We then used hot glue along the motor’s mounting ears to bond them to the cardboard, preventing any wobble. From the side view, the motor shaft sat slightly higher than the top plate of the bearing, so we shimmed under the bearing with an extra layer of cardboard. This brought the motor horn and the bearing’s top plate to the same height, making the rotation interface aligned and stable.
+
+<img src="images/29_neck_side.jpg" width="400"/> <img src="images/30_neck_above.jpg" width="400"/>
+
+We mounted the bearing by fastening both sides with hardware: the lower plate of the lazy-Susan bearing to the top deck of the body, and the upper plate to the head’s cardboard plate. For both connections, we drilled holes and used machine screws with nuts (and washers where needed) to secure everything tightly. On the top cardboard plate, we also cut a horn-shaped opening so the motor horn could seat directly into the plate; this way the horn keys into the cardboard and drives the bearing’s upper plate smoothly as it rotates.
+
+<img src="images/31_neck_connection.jpg" width="400"/>
+
+We then cut another circular cardboard plate the same size as the underside of the head and used generous hot glue to bond it to the upper bearing plate, finishing the neck connection. We did not permanently glue the head onto this plate yet, because we may still need to cut openings in the circle or mount the LED face screen and other components (possibly another small motor). Keeping it unglued preserves access for wiring and adjustments.
+
+<img src="images/32_head_base.jpg" width="400"/> <img src="images/33_full_head.jpg" width="400"/>
+
+By this point, the outer body structure was mostly finished, but it looked a bit too much like a real trash can. To make the robot cuter and softer, we decided to trim off the four top corners of the body—cutting out an equilateral triangle of 15 cm at each corner. This chamfered transition removes the harsh edges and gives the torso a rounder, friendlier silhouette.
+
+<img src="images/34_full_body.jpg" width="400"/>
+
+Next, we prepared to wire the motors to the Arduino Mega. Since the center of the body is hollow, we added a cardboard crossbeam inside as a shelf for the Mega. The beam spans left–right, attaching to the two side panels, while we kept the front and back open to route cables cleanly. This crossbeam not only provides a stable mounting platform for the board but also stiffens the torso, making the whole body more rigid.
+
+<img src="images/35_arduino_mega_shelf.jpg" width="400"/>
+
+
+* Compared to the list above, what did you accomplish for last Thursday (October 23)?
+  We have already completed everything we wrote, including connecting the body and base, the head and body, making two arms and controlling both arms using two motors. Since we don't have the circuit board on top of the arduino mega, we connect the servos to the arduino using jumper cables to test every motor work can work well. 
+* What will you accomplish for this Thursday October 30?
+  We plan to connect three servos to the Arduino Mega and make sure they can move properly. We also aim to complete the rotating antenna on the head, finish building the hammer for the hand, and design the structure for the eyes and other parts of the head.
+* What features remain to be implemented?
+  We still need to decorate the entire robot, build the outer shell for the head and other components, and reinforce the joints and connections between the arms and shoulders to ensure stable movement.
