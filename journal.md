@@ -166,10 +166,10 @@ After confirming the strip worked safely, we placed it inside the wire-mesh arm 
 
 After finishing all the individual components, we finally completed the full wiring layout on the Arduino Mega. In total, the robot uses six active ports, each responsible for a different moving or lighting feature. The left and right arms each have one motor, the neck has another motor for head rotation, and the antenna is driven by its own motor mounted on top of the head. For visuals, we connected two NeoPixel devices: one LED matrix for the eyes and one LED strip embedded inside the wire-mesh arm. With all six ports configured and powered correctly, the Mega now serves as the central hub coordinating every motion and lighting effect in the robot.
 
-<img src="46_arduino_mega_connected.jpg" width="400"/>
+<img src="images/46_arduino_mega_connected.jpg" width="400"/>
 
 We also created a full power-system diagram to keep track of how every component is supplied. Both the Arduino Uno and the Arduino Mega are powered using the Anker power bank’s 5V USB output, ensuring stable and safe voltage for all the logic-level electronics. The two large motors at the base of the robot require a much higher voltage, so they are powered separately using the 12V output from the larger power bank.
 
 All the motors and LED strips connected to the Mega run exclusively on 5V, supplied through the same power bank’s USB port. Drawing this diagram helped us clearly separate the 12V and 5V circuits, preventing accidental mis-wiring and avoiding the overheating issues we previously encountered.
 
-<img src="47_robot_circuit_connection.jpg" width="400"/>
+<img src="images/47_robot_circuit_connection.jpg" width="400"/>
