@@ -121,3 +121,55 @@ Next, we prepared to wire the motors to the Arduino Mega. Since the center of th
   We plan to connect three servos to the Arduino Mega and make sure they can move properly. We also aim to complete the rotating antenna on the head, finish building the hammer for the hand, and design the structure for the eyes and other parts of the head.
 * What features remain to be implemented?
   We still need to decorate the entire robot, build the outer shell for the head and other components, and reinforce the joints and connections between the arms and shoulders to ensure stable movement.
+
+For the final moment of our play, the child robot needs to “end the case” by striking a judge’s gavel. To prepare for this, I started prototyping a lightweight gavel using simple cardboard materials. I first experimented with a plastic tube we found earlier, but it was still surprisingly heavy for the robot’s servo to lift comfortably. Eventually, I discovered that the inner cardboard tube from a decorative paper roll was much lighter. I cut a 30 cm segment to serve as the handle. 
+
+<img src="images/36_hammar_material.jpg" width="400"/>
+
+For the gavel head, I rolled and layered pieces of cardboard into a cylindrical form. This combination keeps the prop structurally solid while remaining light enough for the robot to swing during performance.
+
+<img src="images/37_full_hammar.jpg" width="400"/>
+
+We wanted to place a small antenna on top of the robot’s head, so the antenna motor needed to be securely mounted onto the top cardboard panel. The motor requires its plastic holder to be nailed in place, so we first attached the motor to the holder using small nails. Then we fixed the holder onto the cardboard head panel with another set of nails. However, the cardboard turned out to be thinner and softer than expected, so the nails alone didn’t provide enough stability. To reinforce it, we added several layers of tape around the holder to keep the motor firmly attached. This ensures the antenna can rotate smoothly without the whole mount wobbling.
+
+<img src="images/38_neck_motor_attach.jpg" width="400"/>
+
+To design the antenna, we first sketched a rough outline directly on a photo of the robot. We imagined how a bamboo stick would sit on the motor shaft and rotate as the motor turns. Using the photo as reference, we estimated the overall size and silhouette of the antenna so it would look balanced on the robot’s head. After finalizing the rough shape, we cut the antenna pieces out of cardboard. Once the pieces were shaped properly, we assembled them and used hot glue to secure everything in place. This created a lightweight, stable antenna structure that the motor could rotate smoothly.
+
+<img src="images/39_antenna_motor.jpg" width="400"/><img src="images/40_antenna_try.jpg" width="400"/>
+
+After assembling the antenna structure, we moved on to wiring the NeoPixel LED panels and the motor to the Arduino Mega. Once everything was connected, we uploaded our test code—but the LED panel didn’t light up at all. Our first suspicion was that something might have gone wrong during soldering. We wondered if we had accidentally damaged the LED board, caused a short inside the panel, or broken one of the input/output pads.
+
+Our professor suggested using a multimeter to check whether the panel itself was still functional. After testing continuity and measuring the connections, the board seemed perfectly fine. 
+
+<img src="images/41_test_eye.jpg" width="400"/>
+
+So we went back to the code. Eventually, we discovered the real issue: we had written the matrix dimensions in the wrong order. Because we were chaining two NeoPixel panels together, the matrix could be interpreted in two ways: 16 × 8 and 8 × 16. We had been assuming 8 × 16 the entire time, which caused the pixel mapping to be completely incorrect—making the board look like it wasn’t lighting up at all. After switching it to the correct 16 × 8, the LEDs finally displayed exactly what we coded. It turned out to be a coordinate-mapping bug, not a hardware problem.
+
+<img src="images/42_led_eye.jpg" width="400"/>
+
+We ran into a series of unexpected problems while testing the LED strip. At first, the strip wouldn’t light at all, and we couldn’t figure out why. Our professor suggested trying it with an Arduino Uno and one of the sample codes from the NeoPixel library. Surprisingly, the LED strip lit up normally on the Uno, which meant the strip itself wasn’t the issue.
+
+However, when we connected the same strip to the Mega, only the very first LED lit up, and one more LED further down glowed extremely dim. When we touched the strip, it felt very hot, and even the wires near the connection point were heating up. This made us suspect that the strip might have been damaged during soldering—possibly a short circuit between the copper pads and the wires.
+
+We replaced it with a brand-new LED strip. As soon as we powered it through the Mega, the LEDs became extremely bright, much brighter than expected. That immediately made us nervous, so we unplugged it right away to avoid burning it again.
+
+<img src="images/43_led_strip_light.jpg" width="400"/>
+
+After carefully tracing the connections, we finally discovered the real problem: the Mega was being powered from the wrong port of the power bank. The USB output provides 5V, which is what both the LED strip and the motor require. But earlier, we had accidentally plugged the Mega into the 12V output of the power bank. Feeding 12V into a system meant for 5V caused the LED strip to over-brighten and overheat, especially since the faulty soldering introduced additional shorting points. Fixing the power connection and replacing the strip resolved the issue.
+
+<img src="images/45_power_bank_output.jpg" width="400"/>
+
+After confirming the strip worked safely, we placed it inside the wire-mesh arm structure. The mesh itself is not visually strong enough on stage, so adding the LED strip inside makes the arm more visible and expressive under stage lighting.
+
+<img src="images/44_led_arm.jpg" width="400"/>
+
+After finishing all the individual components, we finally completed the full wiring layout on the Arduino Mega. In total, the robot uses six active ports, each responsible for a different moving or lighting feature. The left and right arms each have one motor, the neck has another motor for head rotation, and the antenna is driven by its own motor mounted on top of the head. For visuals, we connected two NeoPixel devices: one LED matrix for the eyes and one LED strip embedded inside the wire-mesh arm. With all six ports configured and powered correctly, the Mega now serves as the central hub coordinating every motion and lighting effect in the robot.
+
+<img src="46_arduino_mega_connected.jpg" width="400"/>
+
+We also created a full power-system diagram to keep track of how every component is supplied. Both the Arduino Uno and the Arduino Mega are powered using the Anker power bank’s 5V USB output, ensuring stable and safe voltage for all the logic-level electronics. The two large motors at the base of the robot require a much higher voltage, so they are powered separately using the 12V output from the larger power bank.
+
+All the motors and LED strips connected to the Mega run exclusively on 5V, supplied through the same power bank’s USB port. Drawing this diagram helped us clearly separate the 12V and 5V circuits, preventing accidental mis-wiring and avoiding the overheating issues we previously encountered.
+
+<img src="47_robot_circuit_connection.jpg" width="400"/>
