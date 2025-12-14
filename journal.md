@@ -175,6 +175,7 @@ All the motors and LED strips connected to the Mega run exclusively on 5V, suppl
 <img src="images/47_robot_circuit_connection.jpg" width="400"/>
 
 Plan Until Final
+
 November 25 (after class):
 * Finalize the script for the child robot
 * Fix remaining bugs in the case code
