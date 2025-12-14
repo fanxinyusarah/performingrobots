@@ -175,7 +175,7 @@ All the motors and LED strips connected to the Mega run exclusively on 5V, suppl
 <img src="images/47_robot_circuit_connection.jpg" width="400"/>
 
 Plan Until Final
-November 25 (after class): 
+November 25 (after class):
 * Finalize the script for the child robot
 * Fix remaining bugs in the case code
 * Design around 10 cases
@@ -185,13 +185,13 @@ November 26 (entire afternoon):
 * Continue designing cases 
 * Continue producing audio files 
 * Continue writing and testing code — as many cases as possible
-Before class on November 27: 
+Before class on November 27:
 * Complete all hardware mounting and component fixing
-November 28–29: 
+November 28–29:
 * Finish all case development
-November 30: 
+November 30:
 * Rest day
-National Day Holiday — December 1 & 2: 
+National Day Holiday — December 1 & 2:
 * Complete all external elements: painting, costume, head shell, internal structural fixing, and additional small components/lights
 Remaining time:
 * I expect the coding process may not go as smoothly as planned, so the rest of the time will be dedicated to debugging.
@@ -251,4 +251,3 @@ The interior of the robot’s body contained many components, including the spea
 Before going on stage, we installed the string lights and thoroughly tested all cases and individual components to ensure everything was functioning properly. We rehearsed the performance multiple times. And it turns out that the final performance was the most successful visually and theatrically, only a minor issue occurred during the last case that concluded the play: the robot’s gavel did not lower, and the expected impact sound did not play. Despite this small malfunction, the overall performance was highly successful. Seeing the robot operate smoothly on stage after extensive building, debugging, and rehearsing was deeply rewarding and gave us a strong sense of accomplishment.
 
 <img src="images/61_final_robot.jpg" width="400"/>
-<img src="images/60_inner_body_space.jpg" width="400"/>
