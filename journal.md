@@ -181,18 +181,24 @@ November 25 (after class):
 * Design around 10 cases
 * Produce around 10 audio files
 * Write and successfully test code for ~10 cases (including the newly added LED strips)
-November 26 (entire afternoon): 
-* Continue designing cases 
-* Continue producing audio files 
+
+November 26 (entire afternoon):
+* Continue designing cases
+* Continue producing audio files
 * Continue writing and testing code — as many cases as possible
+
 Before class on November 27:
 * Complete all hardware mounting and component fixing
+
 November 28–29:
 * Finish all case development
+
 November 30:
 * Rest day
+
 National Day Holiday — December 1 & 2:
 * Complete all external elements: painting, costume, head shell, internal structural fixing, and additional small components/lights
+
 Remaining time:
 * I expect the coding process may not go as smoothly as planned, so the rest of the time will be dedicated to debugging.
 
