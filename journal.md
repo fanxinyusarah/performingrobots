@@ -176,22 +176,79 @@ All the motors and LED strips connected to the Mega run exclusively on 5V, suppl
 
 Plan Until Final
 November 25 (after class): 
-• Finalize the script for the child robot 
-• Fix remaining bugs in the case code 
-• Design around 10 cases 
-• Produce around 10 audio files 
-• Write and successfully test code for ~10 cases (including the newly added LED strips)
+* Finalize the script for the child robot
+* Fix remaining bugs in the case code
+* Design around 10 cases
+* Produce around 10 audio files
+* Write and successfully test code for ~10 cases (including the newly added LED strips)
 November 26 (entire afternoon): 
-• Continue designing cases 
-• Continue producing audio files 
-• Continue writing and testing code — as many cases as possible
+* Continue designing cases 
+* Continue producing audio files 
+* Continue writing and testing code — as many cases as possible
 Before class on November 27: 
-• Complete all hardware mounting and component fixing
+* Complete all hardware mounting and component fixing
 November 28–29: 
-• Finish all case development
+* Finish all case development
 November 30: 
-• Rest day
+* Rest day
 National Day Holiday — December 1 & 2: 
-• Complete all external elements: painting, costume, head shell, internal structural fixing, and additional small components/lights
+* Complete all external elements: painting, costume, head shell, internal structural fixing, and additional small components/lights
 Remaining time:
-• I expect the coding process may not go as smoothly as planned, so the rest of the time will be dedicated to debugging.
+* I expect the coding process may not go as smoothly as planned, so the rest of the time will be dedicated to debugging.
+
+After testing the eye LEDs and confirming the correct orientation of the LED panels, our next step was to permanently mount the lights onto the head structure. To do this, we cut two small trapezoid-shaped pieces of cardboard that could fit snugly between the two vertical support plates inside the head. These pieces acted as mounting brackets. We fixed the cardboard brackets in place using hot glue, ensuring they were stable and aligned properly. Then, instead of using hot glue directly on the LED panels (to avoid potential heat damage), we attached the LED boards to the cardboard mounts using double-sided tape. This method allowed us to securely fix the eyes in position while protecting the electronics from heat.
+
+<img src="images/48_eye_holder.jpg" width="400"/><img src="images/49_eye_holder_attached.jpg" width="400"/>
+
+At this point, all of the robot’s structural components were completed. With the physical structure finalized, we were able to shift our focus away from construction and problem-solving and move into the decoration phase. This next stage involved refining the robot’s visual identity and expressive details, building on the completed mechanical framework to enhance its character and stage presence.
+
+<img src="images/50_full_naked_robot.jpg" width="400"/>
+
+To make the robot appear more mechanical and less purely cardboard-based, we sourced metallic-colored paint from the scene shop and used it to coat the robot’s body. This metallic finish helped unify the structure visually and enhanced the robot’s machine-like presence, transforming the raw cardboard form into something that more clearly reads as a constructed, mechanical object rather than a prototype.
+
+<img src="images/51_body_painted.jpg" width="400"/>
+
+The head structure was supported by eight quarter-circle cardboard ribs that together formed a hemispherical frame. To enclose this structure while giving the robot a balance of a technological appearance and a childlike, playful quality, we sourced transparent, colored lighting gels from the equipment center. We cut the gels into triangular pieces sized to cover one-eighth of the hemisphere each. These pieces were then attached one by one using hot glue, gradually enclosing the dome. For the front section where the eyes are located, we cut square openings in the gel so that the LED eye panels could remain visible and unobstructed. This approach allowed the head to feel enclosed and polished while still maintaining a soft, expressive visual quality.
+
+<img src="images/52_gel_covered_head.jpg" width="400"/>
+
+We also painted the antenna silver to match the rest of the robot’s metallic body. However, once assembled, we felt that the top of the head appeared too dark and did not stand out clearly on stage. To enhance its visibility and visual impact, we decided to integrate additional lighting into the antenna structure. Specifically, we placed two circular LED rings inside the two openings of the antenna, which resemble an infinity symbol. We programmed the LEDs so that the light travels around the two rings in a continuous figure-eight–like sequence, with rainbow-colored pixels and a fading tail that gradually diminishes in brightness. Special care was taken to ensure that the colors connect smoothly at the point where the two rings meet, maintaining visual continuity.
+
+<img src="images/53_antenna_light.jpg" width="400"/>
+
+At the same time, we felt that the head itself still lacked brightness and did not fully highlight the transparency of the colored gel covering. To address this, we added an LED strip inside the head and set it to emit a constant white light. This internal illumination makes the head appear softly glowing from the outside and enhances the gel’s visual effect. Both the circular LED rings and the internal LED strip were daisy-chained together and connected to a separate Arduino Uno, allowing them to remain continuously lit during the performance.
+
+At this stage, all of the head-related electronics were fully connected. Because a large number of wires were routed through the head and down into the body, we spent time doing wire management to improve both functionality and appearance. We first grouped wires that traveled in the same direction using zip ties, then secured them to stable surfaces with electrical tape wherever possible. We intentionally left a small amount of slack near the head joint to allow for rotation without placing stress on the connections. This process made the back of the robot appear significantly cleaner and more organized.
+
+One issue we encountered was related to workflow order. We had fully enclosed the head with gel before completing the wiring for the antenna LEDs and the internal head lighting. As a result, we had to remove one section of the gel, finish the internal connections, and then reattach it. This experience highlighted that all internal structures and wiring should be finalized before sealing the head. Planning the enclosure step later in the process would have made the build smoother, more efficient, and less prone to rework.
+
+<img src="images/54_wire_from_head.jpg" width="400"/>
+
+Next, we began decorating the painted robot body. To make the robot feel more like a child character, we drew simple, childlike illustrations on the lower part of its body. These drawings helped soften the mechanical appearance and added a playful, innocent quality to the robot’s overall look. To further enhance the visual presence and make the body appear more lively on stage, we borrowed a string of colorful lights from the equipment center and wrapped them around the robot’s torso. Any excess length of the light string was carefully coiled and placed inside a paper bag, which was then secured inside the robot’s body to keep the wiring contained and organized. The image below shows the final visual effect after these decorations were added.
+
+<img src="images/55_robot_with_light_drawing_sample.jpg" width="400"/>
+
+We then continued decorating the front and both sides of the robot using watercolor paint, adding simple line drawings and playful figures. Placing these childlike illustrations on top of the metallic surface created a deliberate contrast between the robot’s mechanical body and its innocent, youthful character. This combination helped the robot feel more approachable and expressive, making it read more clearly as a child figure rather than a purely mechanical object. The final result, shown in the image above, visually supports the story by reinforcing the robot’s role as a child within the narrative.
+
+<img src="images/56_robot_finished_drawing.jpg" width="400"/>
+
+After completing the exterior decoration, we moved on to writing and testing the case-based control code for the robot. We sourced two distinct voice types from the ElevenLabs platform: one was a soft, childlike voice representing the robot’s outward persona, while the other was a sharply contrasting, mechanical-sounding voice. In the narrative, the mechanical voice is used for explanatory or interpretive lines that clarify the child’s dialogue, creating a clear separation between the robot’s inner logic and its expressed character. Additionally, the child’s recurring vocalizations (“meemee mawmaw”) were recorded using Torico’s voice and processed through voice-modulation software to make them sound more like a generated child’s voice.
+
+During the coding and testing process, we encountered a number of technical challenges. These included coordinating LED animations and motor movements simultaneously, ensuring that the LEDs did not draw too much power and cause motor jitter, correcting arm movement directions, synchronizing audio playback with physical actions, and coordinating the motion of the eyes, head, and antenna. We also had to troubleshoot communication issues related to the transmitter. Through extensive debugging and iterative testing, we were eventually able to run through all programmed cases smoothly and reliably.
+
+One mechanical issue emerged due to the frequency of arm movement: the right arm, which was constructed using metal mesh and held a relatively heavy judge’s gavel, began to tilt outward each time it was raised. To resolve this, we reinforced the arm by securing it more tightly to the motor using multiple zip ties, effectively wrapping and stabilizing the connection. This adjustment significantly improved the arm’s stability and allowed it to perform repeated motions without drifting out of alignment.
+
+<img src="images/57_strengthen_arm.jpg" width="400"/><img src="images/58_strengthen_arm2.jpg" width="400"/>
+
+Because the arm was moving repeatedly forward and backward, its wide hand and the added weight of the gavel increased the amplitude of the motion and caused instability. To prevent the arm from swinging outward or colliding with the front of the body when returning to its resting position, we needed to ensure that the arm’s movement path remained parallel to the robot’s torso and followed the side of the body closely. By constraining the motion in this way, the arm could complete its full range of movement without catching on the front surface or deviating from its intended trajectory.
+
+<img src="images/59_arm_parallel.jpg" width="400"/>
+
+The interior of the robot’s body contained many components, including the speaker used for audio playback, a power bank connected to the Arduino, and the string lights. As the number of internal elements increased, the space became cluttered and difficult to manage. To organize the interior more effectively, we reused several triangular cardboard pieces and attached them to the inner walls on both sides, creating designated compartments for each component. This approach helped secure every element in its own position, making the interior layout cleaner and more structured. It also ensured that components would not shift, tangle, or fall out while the robot was operating.
+
+<img src="images/60_inner_body_space.jpg" width="400"/>
+
+Before going on stage, we installed the string lights and thoroughly tested all cases and individual components to ensure everything was functioning properly. We rehearsed the performance multiple times. And it turns out that the final performance was the most successful visually and theatrically, only a minor issue occurred during the last case that concluded the play: the robot’s gavel did not lower, and the expected impact sound did not play. Despite this small malfunction, the overall performance was highly successful. Seeing the robot operate smoothly on stage after extensive building, debugging, and rehearsing was deeply rewarding and gave us a strong sense of accomplishment.
+
+<img src="images/61_final_robot.jpg" width="400"/>
+<img src="images/60_inner_body_space.jpg" width="400"/>
